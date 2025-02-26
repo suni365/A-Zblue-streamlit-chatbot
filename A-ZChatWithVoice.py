@@ -102,7 +102,7 @@ if not st.session_state.authenticated:
         if authenticate_user(username, password):
             st.session_state.authenticated = True
             st.success("✅ Login successful! Welcome to the chatbot.")
-            st.experimental_rerun()
+            st.rerun()
         else:
             st.error("❌ Invalid username or password.")
 else:
